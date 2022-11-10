@@ -11,8 +11,22 @@ const positions = input.split(',').map(str => parseInt(str))
 
 console.log(positions)
 
+// const serSum = (from, to) => {
+//     let res = 0
+
+//     for (let i = from; i <= to; i++) {
+//         res += i
+//     }
+
+//     return res
+// }
+
+function serSum(n) {
+    return (n * (n + 1)) / 2;
+  }
+
 const calcCost = (position) => {
-    return positions.reduce((prev, curr) => prev + Math.abs(curr - position), 0)
+    return positions.reduce((prev, curr) => prev + serSum(Math.abs(curr - position)), 0)
 }
 
 let newPosition = Math.min(...positions) + 1
