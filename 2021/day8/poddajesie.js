@@ -69,4 +69,5 @@ for (const line of lines) {
   count += +decoded;
 }
 
+
 console.log(count);
